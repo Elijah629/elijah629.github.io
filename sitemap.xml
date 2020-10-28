@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>http://elijah629.github.io/CSeries</loc>
+<loc>https://elijah629.github.io/</loc>
+<lastmod>2020-10-28T18:53:47+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>http://elijah629.github.io/CSharpOS</loc>
+<loc>https://elijah629.github.io/CSeries/</loc>
+<lastmod>2020-10-27T20:38:27+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://elijah629.github.io/CSharpOS/</loc>
+<lastmod>2020-10-28T18:31:38+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 </urlset>
