@@ -14,7 +14,7 @@
 	<body style="background: #000000;color: #FFFFFF">
 		<script>
 			  $(function () {
-      window.jqconsole = $('body').jqconsole('RPIOS - 4GB RAM - PYTHON\n\n', '>>> ');
+      window.jqconsole = $('body').jqconsole('PYTHON\n\n', '>>> ');
       pypyjs.stdout = pypyjs.stderr = function(data) {
         jqconsole.Write(data, 'jqconsole-output');
       }
