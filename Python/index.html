@@ -31,9 +31,11 @@
 			location.href = "https://elijah629.github.io";
 		}
 		if (input.toLowerCase() == "back") {
-			resolve("To exit type back()");
+			resolve("print(\"To exit type back()\")");
 		}
-		resolve(input);
+		else {
+			resolve(input);
+		}
             });
           });
         });
