@@ -1,29 +1,17 @@
+function getCookie(name)
+{
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
 window.onload = function onOpen() {
   console.log("LOADED");
-  if (getCookie("mode=dark") != null) {
+  if (typeof(getCookie("mode")) === 'undefined') {
   	Darkmode();
     	change();
   }
 }
-
-function getCookie(name) {
-    var dc = document.cookie;
-    var prefix = name + "=";
-    var begin = dc.indexOf("; " + prefix);
-    if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
-    }
-    else
-    {
-        begin += 2;
-        var end = document.cookie.indexOf(";", begin);
-        if (end == -1) {
-        end = dc.length;
-        }
-    }
-    return decodeURI(dc.substring(begin + prefix.length, end));
-} 
 
 function Darkmode() {
 	document.body.classList.toggle("dark-mode");
