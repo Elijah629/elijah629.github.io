@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<title>The Touchboard</title>
+<img class=lbg style=cursor:progress src=https://wallpapertag.com/wallpaper/full/4/8/a/119572-download-dark-gray-background-1920x1080-cell-phone.jpg>
+<div>
+<h1 style=font-weight:30px;margin:3;font-family:sans-serif;color:black;cursor:progress;position:absolute;top:40%;left:48%;margin-top:-50px;margin-left:-50px;width:auto;height:auto;z-index:99999 class=loaderm>
+Loading...
+</h1>
+<img class=spinner style=cursor:progress;position:absolute;top:50%;left:50%;margin-top:-50px;margin-left:-50px;width:100px;height:100px;z-index:99999 src=../91.gif>
+</div>
+<style>.lbg{z-index:99999;position:fixed;width:101%;height:101%;opacity:10}.loaderc{position:fixed;left:0;top:0;width:100%;height:100%;z-index:99999}.loaderm{position:fixed;left:500px;top:200px;width:100%;height:100%;z-index:99999}</style>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js></script>
+<script>$(window).load(function(){$(".loaderm").fadeOut("slow");$(".loaderc").fadeOut("slow");$(".spinner").fadeOut("slow");$(".lbg").fadeOut("slow")});</script>
+<html>
+<head>
+<h1>This Is Touchboard (Aka Touch Keyboard)</h1>
+<link rel=stylesheet href=../MainP/style.css type=text/css>
+<script src=../MainP/function.js></script>
+<input type=button class=button value="<-Back" onclick="location.href='../MainP/index.html'">
+<input onclick=change(),Darkmode() class=button type=button value="Enable DarkMode" id=DMB /></head><body><form name=type><input type=text name=display class=tb id=display style="border:10px solid black;width:1330px" disabled><br><div class=kr1><input type=reset class=button value="Clear All"><input type=button class=button value=1 onClick="document.type.display.value+='1'"><input type=button class=button value=2 onClick="document.type.display.value+='2'"><input type=button class=button value=3 onClick="document.type.display.value+='3'"><input type=button class=button value=4 onClick="document.type.display.value+='4'"><input type=button class=button value=5 onClick="document.type.display.value+='5'"><input type=button class=button value=6 onClick="document.type.display.value+='6'"><input type=button class=button value=7 onClick="document.type.display.value+='7'"><input type=button class=button value=8 onClick="document.type.display.value+='8'"><input type=button class=button value=9 onClick="document.type.display.value+='9'">
+<input type=button class=button value=0 onClick="document.type.display.value+='0'">
+<input id=back class=button onclick=BS() type=button value=Backspace>
+</div>
+<div class=kr2>
+<input type=button class=button value=Q onClick="document.type.display.value+='Q'">
+<input type=button class=button value=W onClick="document.type.display.value+='W'">
+<input type=button class=button value=E onClick="document.type.display.value+='E'">
+<input type=button class=button value=R onClick="document.type.display.value+='R'">
+<input type=button class=button value=T onClick="document.type.display.value+='T'">
+<input type=button class=button value=Y onClick="document.type.display.value+='Y'">
+<input type=button class=button value=U onClick="document.type.display.value+='U'">
+<input type=button class=button value=I onClick="document.type.display.value+='I'">
+<input type=button class=button value=O onClick="document.type.display.value+='O'">
+<input type=button class=button value=P onClick="document.type.display.value+='P'"><br>
+</div>
+<div class=kr3>
+<input type=button class=button value=A onClick="document.type.display.value+='A'">
+<input type=button class=button value=S onClick="document.type.display.value+='S'">
+<input type=button class=button value=D onClick="document.type.display.value+='D'">
+<input type=button class=button value=F onClick="document.type.display.value+='F'">
+<input type=button class=button value=G onClick="document.type.display.value+='G'">
+<input type=button class=button value=H onClick="document.type.display.value+='H'">
+<input type=button class=button value=J onClick="document.type.display.value+='J'">
+<input type=button class=button value=K onClick="document.type.display.value+='K'">
+<input type=button class=button value=L onClick="document.type.display.value+='L'"><br>
+</div>
+<div class=kr4>
+<input type=button class=button value=Z onClick="document.type.display.value+='Z'">
+<input type=button class=button value=X onClick="document.type.display.value+='X'">
+<input type=button class=button value=C onClick="document.type.display.value+='C'">
+<input type=button class=button value=V onClick="document.type.display.value+='V'">
+<input type=button class=button value=B onClick="document.type.display.value+='B'">
+<input type=button class=button value=N onClick="document.type.display.value+='N'">
+<input type=button class=button value=M onClick="document.type.display.value+='M'"><br>
+</div>
+<input type=button class="button SB" value="                    Space                     " onClick="document.type.display.value+=' '">
+</form>
+<script>function BS(){display.value=display.value.substring(0,display.value.length-1)};</script>
+</body>
+
+</html>

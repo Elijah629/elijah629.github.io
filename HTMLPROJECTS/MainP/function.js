@@ -1,0 +1,3 @@
+function Darkmode(){var b=document.body;b.classList.toggle("dark-mode")}function change(){var b=document.getElementById("DMB");if(b.value=="Disable DarkMode"){b.value=" Enable DarkMode"}else{b.value="Disable DarkMode"}}function ShowHide(b){if(document.getElementById(b).style.display=="none"){document.getElementById(b).style.display="block"}else{document.getElementById(b).style.display="none"}}function RNG(){var a=randomnumber=Math.floor(Math.random()*$Genorator_Number);document.getElementById("rng").innerHTML=a};function Alert(){window.alert("The Genorator Number Is: " + $Genorator_Number)};
+// Replace the 1001 number below to tune the genorator field
+var $Genorator_Number = 1001;

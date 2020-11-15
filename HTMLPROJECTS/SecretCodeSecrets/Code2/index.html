@@ -1,0 +1,146 @@
+<html>
+<head>
+  <img class=lbg style=cursor:progress src=https://wallpapertag.com/wallpaper/full/4/8/a/119572-download-dark-gray-background-1920x1080-cell-phone.jpg>
+  <div>
+  <h1 style=font-weight:30px;margin:3;font-family:sans-serif;color:black;cursor:progress;position:absolute;top:40%;left:48%;margin-top:-50px;margin-left:-50px;width:auto;height:auto;z-index:99999 class=loaderm>
+  Loading...
+  </h1>
+  <img class=spinner style=cursor:progress;position:absolute;top:50%;left:50%;margin-top:-50px;margin-left:-50px;width:100px;height:100px;z-index:99999 src=../../91.gif>
+  </div>
+  <style>.lbg{z-index:99999;position:fixed;width:101%;height:101%;opacity:10}.loaderc{position:fixed;left:0;top:0;width:100%;height:100%;z-index:99999}.loaderm{position:fixed;left:500px;top:200px;width:100%;height:100%;z-index:99999}</style>
+  <script src=https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js></script>
+  <script>$(window).load(function(){$(".loaderm").fadeOut("slow");$(".loaderc").fadeOut("slow");$(".spinner").fadeOut("slow");$(".lbg").fadeOut("slow")});</script>
+  <script src="function.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="../../MainP/style.css">
+  <script src="../../MainP/function.js"></script>
+  <input onclick=change(),Darkmode() class="button Font" type=button value="Enable DarkMode" id=DMB />
+  <input type="button" class="button Font" onclick="location.href='../../MainP/index.html'" value="Back <-"/>
+  <h1 title="Lol MEMES">YOU SHALL NOT PASS!!!!!!!!</h1>
+</head>
+<style>
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #000000;
+  text-align: center;
+  border: 4px solid #000000;
+  border-radius:25px;
+}
+
+#mydivheader {
+  padding:10px;
+  z-index: 10;
+  background-color: #000000;
+  color: #000000;
+  border-radius:25px;
+}
+.BodyCover1 {
+  height: 363px;
+  width: 560px;
+  position:fixed;
+  background-color: #000;
+  border-radius: 25px
+}
+</style>
+<body>
+  <div class="BodyCover1"></div>
+<div id="mydiv">
+  <div id="mydivheader" class="Font"></div>
+  <iframe width="560" height="315" style="border-bottom-left-radius:25px;border-bottom-right-radius:25px;" src="https://www.youtube-nocookie.com/embed/3xYXUeSmb-Y" loop autoplay></iframe>
+</div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+    <style>
+      .Glowbutton {
+        background-color: #1c87c9;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+      }
+      @keyframes glowing {
+        0% {
+          background-color: #000;
+          box-shadow: 0 0 5px #000;
+        }
+        50% {
+          background-color: #F00;
+          box-shadow: 0 0 20px #F00;
+        }
+        100% {
+          background-color: #000;
+          box-shadow: 0 0 5px #000;
+        }
+      }
+      .Glowbutton {
+        animation: glowing 1000ms infinite;
+      }
+      .GlowbuttonCover
+      {
+position:absolute;
+height:70;
+width:200;
+top:238px;
+left:189px;
+background-color:#555;
+border-radius: 25px;
+      }
+</style>
+<div class="GlowbuttonCover"></div>
+<div class="Glowbutton" style="position:absolute;top:200px;left:140px;"></div>
+<div class="Glowbutton" style="position:absolute;top:200px;left:420px;"></div>
+<div class="Glowbutton" style="position:absolute;top:330px;left:140px;"></div>
+<div class="Glowbutton" style="position:absolute;top:330px;left:420px;"></div>
+<input type="button" title="DO NOT PRESS!" onclick="location.href='index2.html'" class="Glowbutton" value="DO NOT PRESS!" style="position:absolute;top:250px;left:200;"/>
+</html>
