@@ -24,7 +24,7 @@ function change() {
     		document.cookie = "Darkmode= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	} else {
 		b.value = "Disable DarkMode";
-    		document.cookie = "Darkmode";
+    		document.cookie = "Darkmode=yes";
 	}
 }
 
