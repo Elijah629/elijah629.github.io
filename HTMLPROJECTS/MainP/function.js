@@ -1,4 +1,5 @@
 window.onload = function onOpen() {
+  console.log("LOADED");
   if (getCookie("mode=dark") != null) {
   	Darkmode();
     	change();
