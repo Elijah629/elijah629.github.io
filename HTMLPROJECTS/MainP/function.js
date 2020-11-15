@@ -4,7 +4,7 @@ window.onload = function onOpen() {
 	Darkmode();
     	change();
   }
-}
+};
 
 function Darkmode() {
 	document.body.classList.toggle("dark-mode");
