@@ -1,3 +1,36 @@
-function Darkmode(){var b=document.body;b.classList.toggle("dark-mode")}function change(){var b=document.getElementById("DMB");if(b.value=="Disable DarkMode"){b.value=" Enable DarkMode"}else{b.value="Disable DarkMode"}}function ShowHide(b){if(document.getElementById(b).style.display=="none"){document.getElementById(b).style.display="block"}else{document.getElementById(b).style.display="none"}}function RNG(){var a=randomnumber=Math.floor(Math.random()*$Genorator_Number);document.getElementById("rng").innerHTML=a};function Alert(){window.alert("The Genorator Number Is: " + $Genorator_Number)};
-// Replace the 1001 number below to tune the genorator field
-var $Genorator_Number = 1001;
+function onOpen() {
+  if (document.cookie.contains("mode=dark")) {
+  	Darkmode();
+    change();
+  }
+}
+
+window.onload = onOpen;
+
+function Darkmode() {
+	document.body.classList.toggle("dark-mode");
+}
+
+function change() {
+	var b = document.getElementById("DMB");
+	if(b.value == "Disable DarkMode") {
+		b.value = "Enable DarkMode";
+    document.cookie = "mode=light";
+	} else {
+		b.value = "Disable DarkMode";
+    document.cookie = "mode=light";
+	}
+}
+
+function ShowHide(b) {
+	if(document.getElementById(b).style.display == "none") {
+		document.getElementById(b).style.display = "block";
+	} else {
+		document.getElementById(b).style.display = "none";
+	}
+}
+
+function RNG() {
+	document.getElementById("rng").innerHTML = Math.floor(Math.random() * $Genorator_Number);
+}
+var $Genorator_Number = 10001;
