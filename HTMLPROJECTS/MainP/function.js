@@ -1,3 +1,11 @@
+window.onload = function onOpen(){
+	console.log("COOKIES LOADING")
+	if (document.cookie.includes("mode=dark")) {
+		change();
+		Darkmode();
+	}
+};
+
 function Darkmode() {
 	document.body.classList.toggle("dark-mode");
 }
@@ -6,8 +14,10 @@ function change() {
 	var b = document.getElementById("DMB");
 	if(b.value == "Disable DarkMode") {
 		b.value = "Enable DarkMode";
+		document.cookie = "mode=light";
 	} else {
 		b.value = "Disable DarkMode";
+		document.cookie = "mode=dark";
 	}
 }
 
