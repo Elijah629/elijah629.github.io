@@ -7,8 +7,8 @@ function getCookie(name)
 
 window.onload = function onOpen() {
   console.log("LOADED");
-  if (typeof(getCookie("mode")) === 'undefined') {
-  	Darkmode();
+  if (typeof(getCookie("Darkmode")) === 'undefined') {} else {
+	Darkmode();
     	change();
   }
 }
@@ -21,10 +21,10 @@ function change() {
 	var b = document.getElementById("DMB");
 	if(b.value == "Disable DarkMode") {
 		b.value = "Enable DarkMode";
-    document.cookie = "mode=light";
+    		document.cookie = "Darkmode= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	} else {
 		b.value = "Disable DarkMode";
-    document.cookie = "mode=light";
+    		document.cookie = "Darkmode";
 	}
 }
 
