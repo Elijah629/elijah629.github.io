@@ -1,13 +1,6 @@
-function getCookie(name)
-{
-    var value = "; " + document.cookie;
-    var parts = value.split("; " + name + "=");
-    if (parts.length == 2) return parts.pop().split(";").shift();
-}
-
 window.onload = function onOpen() {
   console.log("LOADED");
-  if (typeof(getCookie("Darkmode")) === 'undefined') {} else {
+  if (document.cookie.includes("mode=dark")) {
 	Darkmode();
     	change();
   }
@@ -21,10 +14,10 @@ function change() {
 	var b = document.getElementById("DMB");
 	if(b.value == "Disable DarkMode") {
 		b.value = "Enable DarkMode";
-    		document.cookie = "Darkmode= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+    		document.cookie = "mode=light";
 	} else {
 		b.value = "Disable DarkMode";
-    		document.cookie = "Darkmode=yes";
+    		document.cookie = "mode=dark";
 	}
 }
 
