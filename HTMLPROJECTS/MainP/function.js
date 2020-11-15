@@ -15,11 +15,9 @@ function change() {
 	if(b.value == "Disable DarkMode") {
 		b.value = "Enable DarkMode";
 		document.cookie = "mode=light";
-		location.reload();
 	} else {
 		b.value = "Disable DarkMode";
 		document.cookie = "mode=dark";
-		location.reload();
 	}
 }
 
