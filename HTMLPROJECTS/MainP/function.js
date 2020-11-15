@@ -1,11 +1,9 @@
-function onOpen() {
+window.onload = function onOpen() {
   if (getCookie("mode=dark") != null) {
   	Darkmode();
     	change();
   }
 }
-
-window.onload = onOpen;
 
 function getCookie(name) {
     var dc = document.cookie;
