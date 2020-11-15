@@ -27,7 +27,13 @@
           jqconsole.SetPromptLabel(ps1);
           return new Promise(function(resolve, reject) {
             jqconsole.Prompt(true, function (input) {
-				resolve(input);
+		if (input.toLowerCase() == "back()") {
+			location.href = "https://elijah629.github.io";
+		}
+		if (input.toLowerCase() == "back") {
+			resolve("To exit type back()");
+		}
+		resolve(input);
             });
           });
         });
