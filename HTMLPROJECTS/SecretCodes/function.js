@@ -1,7 +1,7 @@
 function Codecheck1(){
   var textarea = document.getElementById('textareabox');
 
-  var code1 = 'HGf20LGh';
+  var code1 = 'SB-129';
 
   var textValue=textarea.value;
 
@@ -14,7 +14,6 @@ Code1tp()
 function Code1tp() {
   location.href='../SecretCodeSecrets/Code1/index.html'
 }
-//----------------------------------------------------//
 function Codecheck2(){
   var textarea = document.getElementById('textareabox');
 
