@@ -4,6 +4,7 @@ window.onload = function onOpen(){
 		change();
 		Darkmode();
 	}
+	if(navigator.appVersion.indexOf("Win") == -1){document.write("<h1>Error</h1><hr/><p>This site only works with windows</p>");}
 };
 
 function Darkmode() {
