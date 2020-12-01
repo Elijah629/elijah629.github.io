@@ -122,6 +122,9 @@ Repos:
 
 
     function donotcookies(){
+	if (!document.cookie.includes("show=false")) {
+            modal.style.display = "block";
+        }
         if (document.getElementById("show").checked){
             document.cookie = "show=false";
         }
