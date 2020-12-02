@@ -127,12 +127,18 @@ Repos:
 	    if (document.getElementById("show").checked){
                 document.cookie = "show=false";
             }
+	    else {
+	    	document.cookie = "show=true";
+	    }
         }
 	else {
 	    modal.style.display = "block";
-	    if (!document.getElementById("show").checked){
+	    if (document.getElementById("show").checked){
                 document.cookie = "show=true";
             }
+	    else {
+	    	document.cookie = "show=true";
+	    }
 	}
     }
 
