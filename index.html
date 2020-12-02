@@ -121,21 +121,30 @@ Repos:
     var span = document.getElementsByClassName("close")[0];
 
 
-//     function donotcookies(){
-// 	if (!document.cookie.includes("show=false")) {
-//             modal.style.display = "block";
-//         }
-//         if (document.getElementById("show").checked){
-//             document.cookie = "show=false";
-//         }
-//         else {
-//             document.cookie = "show=true";
-//         }
-//     }
+    function donotcookies(){
+	if (document.cookie.includes("show=false")) {
+            modal.style.display = "none";
+	    if (document.getElementById("show").checked){
+                document.cookie = "show=false";
+            }
+            else {
+                document.cookie = "show=true";
+            }
+        }
+	else {
+	    modal.style.display = "block";
+	    if (document.getElementById("show").checked){
+                document.cookie = "show=false";
+            }
+            else {
+                document.cookie = "show=true";
+            }
+	}
+    }
 
-//     window.onload = function(){
-//         donotcookies();
-//     };
+    window.onload = function(){
+        donotcookies();
+    };
     span.onclick = function() {
         modal.style.display = "none";
     };
