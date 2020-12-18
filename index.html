@@ -262,7 +262,7 @@ function searcher() {
 		console.log("YES");
 		var results = document.createElement("table");
 		var header = document.createElement("th");
-		header.innerHTML = "<form action=\"https://elijah629.github.io\"><input placeholder=\"Type here to search\" type=\"text\" id=\"q\" name=\"q\" value=\"" + query + "\"/><input type=\"submit\" value=\"Search\"></form><a class=\"gg-arrow-left-r\" style=\"float:right;\" href=\"https://elijah629.github.io/\">Back.</a>";
+		header.innerHTML = "<form action=\"https://elijah629.github.io\"><input placeholder=\"Type here to search\" type=\"text\" id=\"q\" name=\"q\" value=\"" + query + "\"/><input type=\"submit\" value=\"Search\"></form><a class=\"gg-arrow-left-r\" style=\"float:right;\" href=\"https://elijah629.github.io/\"></a>";
 		results.appendChild(header);
 		var a = search.search(query);
 		var b = JSON.stringify(a);
