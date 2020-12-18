@@ -256,8 +256,8 @@ async function createresult(element, urls) {
 	element.appendChild(row);
 }
 function searcher() {
+  "use strict";
 	try {
-		"use strict";
 		if (new URLSearchParams(window.location.search).has("q") && new URLSearchParams(window.location.search).get("q") != "" && new URLSearchParams(window.location.search).get("q").replace(/\s/g, '').length) {
 			const query = new URLSearchParams(window.location.search).get("q");
 			var results = document.createElement("table");
@@ -272,25 +272,24 @@ function searcher() {
 			}
 			document.body.innerHTML = "";
 			document.body.appendChild(results);
+		} else {
+			var form = document.createElement("form");
+			form.setAttribute("action", "https://elijah629.github.io");
+			form.setAttribute("style", "top:15px;position:absolute;right:15px;");
+			var searchbar = document.createElement("input");
+			searchbar.setAttribute("type", "text");
+			searchbar.setAttribute("id", "q");
+			searchbar.setAttribute("name", "q");
+			searchbar.setAttribute("placeholder","Type here to search");
+			form.appendChild(searchbar);
+			var searchbutton = document.createElement("input");
+			searchbutton.setAttribute("type", "submit");
+			searchbutton.setAttribute("value", "Search");
+			form.appendChild(searchbutton);
+			document.body.appendChild(form);
 		}
-	}catch(e){
+	 }catch(e){
 		document.body.innerHTML = "<h1>Internal error has occured:<h1><br><p>"+e+"</p><br><p>Click the arrow to get back on track!</p><br><a class=\"gg-arrow-left-r\" href=\"https://elijah629.github.io/\"></a>";
-	}
-	} else {
-		var form = document.createElement("form");
-		form.setAttribute("action", "https://elijah629.github.io");
-		form.setAttribute("style", "top:15px;position:absolute;right:15px;");
-		var searchbar = document.createElement("input");
-		searchbar.setAttribute("type", "text");
-		searchbar.setAttribute("id", "q");
-		searchbar.setAttribute("name", "q");
-		searchbar.setAttribute("placeholder","Type here to search");
-		form.appendChild(searchbar);
-		var searchbutton = document.createElement("input");
-		searchbutton.setAttribute("type", "submit");
-		searchbutton.setAttribute("value", "Search");
-		form.appendChild(searchbutton);
-		document.body.appendChild(form);
 	}
 }
 window.onload = function () {
