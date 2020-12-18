@@ -67,6 +67,44 @@ th {
 	color:green;
     text-decoration:underline;
 }
+input[type=text] {
+  padding: 7px 15px;
+  display: inline-block;
+  border: 0px;
+  box-sizing: border-box;
+}
+input:focus[type=text] {
+  padding: 7px 15px;
+  display: inline-block;
+  border: 0px;
+  box-sizing: border-box;
+}
+form {
+	width:fit-content;
+  	border: 1px solid black;
+}
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 7px 15px;
+  border: 2px solid #555555;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+input:hover[type=submit] {
+  background-color: #555555;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -190,7 +228,7 @@ function searcher() {
 		console.log("YES");
 		var results = document.createElement("table");
 		var header = document.createElement("th");
-		header.innerHTML = "<form action=\"https://elijah629.github.io\"><input type=\"text\" id=\"q\" name=\"q\" value=\"" + query + "\"/><input type=\"submit\" value=\"Search\"><a style=\"float:right;\" href=\"https://elijah629.github.io/\">Back.</a></form>";
+		header.innerHTML = "<form action=\"https://elijah629.github.io\"><input placeholder=\"Type here to search\" type=\"text\" id=\"q\" name=\"q\" value=\"" + query + "\"/><input type=\"submit\" value=\"Search\"><a style=\"float:right;\" href=\"https://elijah629.github.io/\">Back.</a></form>";
 		results.appendChild(header);
 		var a = search.search(query);
 		var b = JSON.stringify(a);
@@ -208,6 +246,7 @@ function searcher() {
 		searchbar.setAttribute("type", "text");
 		searchbar.setAttribute("id", "q");
 		searchbar.setAttribute("name", "q");
+		searchbar.setAttribute("placeholder","Type here to search");
 		form.appendChild(searchbar);
 		var searchbutton = document.createElement("input");
 		searchbutton.setAttribute("type", "submit");
