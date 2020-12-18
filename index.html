@@ -257,7 +257,7 @@ async function createresult(element, urls) {
 }
 function searcher() {
 	"use strict";
-	if (new URLSearchParams(window.location.search).has("q") && new URLSearchParams(window.location.search).get("q") != "" && !new URLSearchParams(window.location.search).get("q").replace(/\s/g, '').length) {
+	if (new URLSearchParams(window.location.search).has("q") && new URLSearchParams(window.location.search).get("q") != "" && new URLSearchParams(window.location.search).get("q").replace(/\s/g, '').length) {
 		const query = new URLSearchParams(window.location.search).get("q");
 		console.log("YES");
 		var results = document.createElement("table");
