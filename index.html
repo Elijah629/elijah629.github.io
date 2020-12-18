@@ -256,22 +256,26 @@ async function createresult(element, urls) {
 	element.appendChild(row);
 }
 function searcher() {
-	"use strict";
-	if (new URLSearchParams(window.location.search).has("q") && new URLSearchParams(window.location.search).get("q") != "" && new URLSearchParams(window.location.search).get("q").replace(/\s/g, '').length) {
-		const query = new URLSearchParams(window.location.search).get("q");
-		console.log("YES");
-		var results = document.createElement("table");
-		var header = document.createElement("th");
-		header.innerHTML = "<form action=\"https://elijah629.github.io\"><input placeholder=\"Type here to search\" type=\"text\" id=\"q\" name=\"q\" value=\"" + query + "\"/><input type=\"submit\" value=\"Search\"></form><a class=\"gg-arrow-left-r\" style=\"top:35px;position:absolute;right:15px;\" href=\"https://elijah629.github.io/\"></a>";
-		results.appendChild(header);
-		var a = search.search(query);
-		var b = JSON.stringify(a);
-		var c = JSON.parse(b);
-		for (var i = 0; i < c.length; i++) {
-			createresult(results, c[i].ref);
+	try {
+		"use strict";
+		if (new URLSearchParams(window.location.search).has("q") && new URLSearchParams(window.location.search).get("q") != "" && new URLSearchParams(window.location.search).get("q").replace(/\s/g, '').length) {
+			const query = new URLSearchParams(window.location.search).get("q");
+			var results = document.createElement("table");
+			var header = document.createElement("th");
+			header.innerHTML = "<form action=\"https://elijah629.github.io\"><input placeholder=\"Type here to search\" type=\"text\" id=\"q\" name=\"q\" value=\"" + query + "\"/><input type=\"submit\" value=\"Search\"></form><a class=\"gg-arrow-left-r\" style=\"top:35px;position:absolute;right:15px;\" href=\"https://elijah629.github.io/\"></a>";
+			results.appendChild(header);
+			var a = search.search(query);
+			var b = JSON.stringify(a);
+			var c = JSON.parse(b);
+			for (var i = 0; i < c.length; i++) {
+				createresult(results, c[i].ref);
+			}
+			document.body.innerHTML = "";
+			document.body.appendChild(results);
 		}
-		document.body.innerHTML = "";
-		document.body.appendChild(results);
+	}catch(e){
+		document.body.innerHTML = "<h1>Internal error has occured:<h1><br><p>"+e+"</p><br><p>Click the arrow to get back on track!</p><br><a class=\"gg-arrow-left-r\" href=\"https://elijah629.github.io/\"></a>";
+	}
 	} else {
 		var form = document.createElement("form");
 		form.setAttribute("action", "https://elijah629.github.io");
