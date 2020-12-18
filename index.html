@@ -259,7 +259,7 @@ function searcher() {
   "use strict";
 	try {
 		if (new URLSearchParams(window.location.search).has("q") && new URLSearchParams(window.location.search).get("q") != "" && new URLSearchParams(window.location.search).get("q").replace(/\s/g, '').length) {
-			const query = "*" + new URLSearchParams(window.location.search).get("q") + "*";
+			const query = new URLSearchParams(window.location.search).get("q");
 			var results = document.createElement("table");
 			var header = document.createElement("th");
 			header.innerHTML = "<form action=\"https://elijah629.github.io\"><input placeholder=\"Type here to search\" type=\"text\" id=\"q\" name=\"q\" value=\"" + query + "\"/><input type=\"submit\" value=\"Search\"></form><a class=\"gg-arrow-left-r\" style=\"top:35px;position:absolute;right:15px;\" href=\"https://elijah629.github.io/\"></a>";
