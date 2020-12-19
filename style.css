@@ -102,7 +102,7 @@
     margin:-5px;
 }
 table td:first-child{
-  margin-left:30px;
+  padding-left:30px;
 }
 table {
   text-align:left;
