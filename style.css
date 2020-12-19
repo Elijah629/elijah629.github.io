@@ -101,8 +101,10 @@
 .p {
     margin:-5px;
 }
-table td:first-child{
+td:first-child{
   padding-left:30px;
+  border-collapse: separate;
+  border-spacing: 30px 20px;
 }
 table {
   text-align:left;
@@ -121,8 +123,6 @@ td {
   border: 1px solid #FFFFFF;
   border-radius: 5px;
   text-align: left;
-  border-collapse: separate;
-  border-spacing: 30px 20px;
   padding: 9px;
   cursor:pointer;
 }
