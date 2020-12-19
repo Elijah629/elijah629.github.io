@@ -105,20 +105,23 @@ table {
   font-family: arial, sans-serif;
   width: 100%;
   border-spacing: 0 20px;
+  border-collapse: collapse;
 }
 
 .des {
-	color:#3a3a3a;
+    color:#3a3a3a;
     text-decoration:none;
     font-size:12px;
 }
 td {
+  padding: 5px;
   border: 1px solid #FFFFFF;
   border-radius: 5px;
   text-align: left;
   padding: 9px;
   cursor:pointer;
 }
+.indent{border:none;}
 td:hover {
   border: 1px solid #c6cacc;
   border-radius: 5px;
