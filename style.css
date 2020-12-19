@@ -94,8 +94,8 @@
     bottom: 8px;
     background: currentColor;
 }
-a {color:#3a3a3a;}
-a:visited {color:#3a3a3a;}
+a {color:currentColor;}
+a:visited {color:currentColor;}
 footer {
   	position: fixed;
 	left: 0;
