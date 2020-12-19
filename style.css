@@ -101,16 +101,14 @@
 .p {
     margin:-5px;
 }
-td:first-child{
+table td:first-child{
   padding-left:30px;
-  border-collapse: separate;
-  border-spacing: 30px 20px;
 }
 table {
   text-align:left;
   font-family: arial, sans-serif;
   width: 100%;
-  border-spacing: 0px 20px;
+  border-spacing: 30px 20px;
 }
 
 .des {
