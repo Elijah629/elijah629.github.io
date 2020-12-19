@@ -322,18 +322,15 @@ function searcher() {
     document.body.innerHTML = "<h1>Internal error has occured:</h1><p>" + e + "</p><p>Click the arrow to get back on track!</p><a class=\"gg-arrow-left-r\" href=\"https://elijah629.github.io/\"></a>";
   }
 }
-//const sleep = (delay) => new Promise((resolve) => setTimeout(resolve,response));
 var exists = function(item){"use strict";if(localStorage.getItem(item)==null){return false;}else{return true;}};
 function idbcache(sitemap) {
 	"use strict";
 	if (exists("sitemap") && exists("index")) {
-		console.log("EXISTS");
 		fetch(sitemap).then(a => a.text()).then(b => {
 			if (localStorage.getItem("sitemap") == b) {
 				index = JSON.parse(localStorage.getItem("index"));
 				ready();
 			} else {
-				console.log("DIFFRENT");
 				(async function(){
 					await indexbuilder(sitemap);
 					localStorage.setItem("index",JSON.stringify(index));
@@ -342,7 +339,6 @@ function idbcache(sitemap) {
 			}
 		});
 	} else {
-		console.log("CREATE");
 		fetch(sitemap).then(a => a.text()).then(b => {
 			(async function(){
 				await indexbuilder(sitemap);
