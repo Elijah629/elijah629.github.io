@@ -107,6 +107,7 @@ async function createresult(element, urls) {
   });
   const titlet = title_TMP;
   var row = document.createElement("tr");
+  row.setAttribute("style","margin-left:200px;margin-right:50px;")
   var data = document.createElement("td");
   data.setAttribute("onclick", "window.location='" + urls + "';");
   var title = document.createElement("p");
