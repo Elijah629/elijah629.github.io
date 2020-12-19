@@ -107,8 +107,6 @@ async function createresult(element, urls) {
   });
   const titlet = title_TMP;
   var row = document.createElement("tr");
-  var indent = document.createEleme("td");
-  indent.setAttribute("class","indent");
   var data = document.createElement("td");
   data.setAttribute("onclick", "window.location='" + urls + "';");
   var title = document.createElement("p");
@@ -128,7 +126,6 @@ async function createresult(element, urls) {
   await data.appendChild(url);
   await data.appendChild(br2);
   await data.appendChild(description);
-  await row.appendChild(indent);
   await row.appendChild(data);
   element.appendChild(row);
 }
