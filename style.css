@@ -103,13 +103,13 @@
 }
 table td:first-child{
   padding-left:30px;
-  border-spacing: 30px 0
 }
 table {
   text-align:left;
   font-family: arial, sans-serif;
   width: 100%;
-  border-spacing: 0 20px;
+  border-collapse: separate;
+  border-spacing: 30px 20px;
 }
 
 .des {
