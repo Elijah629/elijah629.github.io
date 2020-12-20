@@ -102,13 +102,13 @@
     margin:-5px;
 }
 table td:first-child{
-  padding-left:30px;
+  padding-left:50px;
 }
 table {
   text-align:left;
   font-family: arial, sans-serif;
   width: 100%;
-  border-spacing: 30px 20px;
+  border-spacing: 0 20px;
 }
 
 .des {
