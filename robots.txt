@@ -1,1 +1,7 @@
+User-Agent: *
+Disallow: https://elijah629.github.io/HTMLPROJECTS/SecretCodes
+
+User-Agent: *
+Disallow: https://elijah629.github.io/HTMLPROJECTS/SecretCodeSecrets
+
 Sitemap: https://elijah629.github.io/sitemap.xml
